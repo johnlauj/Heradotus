@@ -1,4 +1,12 @@
-﻿using System;
+﻿/*
+ * Author: Nikolay Dvurechensky
+ * Site: https://sites.google.com/view/dvurechensky
+ * Gmail: dvurechenskysoft@gmail.com
+ * Last Updated: 01 ноября 2025 02:20:14
+ * Version: 1.0.2
+ */
+
+using System;
 using System.Collections.ObjectModel;
 using System.Linq;
 using System.Windows;

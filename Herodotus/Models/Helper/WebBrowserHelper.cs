@@ -1,4 +1,12 @@
-﻿using System.Windows;
+﻿/*
+ * Author: Nikolay Dvurechensky
+ * Site: https://sites.google.com/view/dvurechensky
+ * Gmail: dvurechenskysoft@gmail.com
+ * Last Updated: 01 ноября 2025 02:20:14
+ * Version: 1.0.2
+ */
+
+using System.Windows;
 using System.Windows.Controls;
 
 namespace Herodotus.Models.Helper
