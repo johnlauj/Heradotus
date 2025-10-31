@@ -1,0 +1,147 @@
+﻿<hc:Window
+    x:Class="Herodotus.Views.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:hc="https://handyorg.github.io/handycontrol"
+    xmlns:i="http://schemas.microsoft.com/xaml/behaviors"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:prism="http://prismlibrary.com/"
+    Title="{Binding Title}"
+    Width="1080"
+    Height="1080"
+    prism:ViewModelLocator.AutoWireViewModel="True"
+    ShowIcon="True"
+    ShowTitle="True"
+    WindowStartupLocation="CenterScreen"
+    mc:Ignorable="d">
+    <hc:Window.NonClientAreaContent>
+        <hc:TransitioningContentControl TransitionStoryboard="{StaticResource Top2BottomTransition}">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+                <StackPanel Height="29">
+                    <Menu HorizontalAlignment="Left">
+                        <MenuItem Header="Функции">
+                            <MenuItem Command="{Binding AddScenarioCommand}" Header="Добавить техническое описание" />
+                        </MenuItem>
+                    </Menu>
+                </StackPanel>
+            </Grid>
+        </hc:TransitioningContentControl>
+    </hc:Window.NonClientAreaContent>
+    <UniformGrid>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="60" />
+            </Grid.RowDefinitions>
+            <!--  Выбор сценария + кнопка  -->
+            <Grid Margin="16" HorizontalAlignment="Center">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <ScrollViewer
+                    Grid.Row="1"
+                    HorizontalScrollBarVisibility="Auto"
+                    VerticalScrollBarVisibility="Auto">
+                    <ItemsControl ItemsSource="{Binding Scenarios}">
+                        <ItemsControl.ItemsPanel>
+                            <ItemsPanelTemplate>
+                                <!--  равномерно делит пространство  -->
+                                <UniformGrid Rows="1" />
+                            </ItemsPanelTemplate>
+                        </ItemsControl.ItemsPanel>
+                        <ItemsControl.ItemTemplate>
+                            <DataTemplate>
+                                <!--  Горизонтальный контейнер для StepBar + кнопок  -->
+                                <Grid Margin="26">
+                                    <Grid HorizontalAlignment="Left" VerticalAlignment="Top">
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition />
+                                            <RowDefinition />
+                                            <RowDefinition />
+                                        </Grid.RowDefinitions>
+                                        <hc:TransitioningContentControl TransitionStoryboard="{StaticResource FadeTransition}">
+                                            <TextBlock FontSize="20" Text="{Binding Name}" />
+                                            <!--  Кнопка удаления сценария, сверху справа  -->
+                                        </hc:TransitioningContentControl>
+                                        <hc:TransitioningContentControl TransitionStoryboard="{StaticResource Left2RightTransition}">
+                                            <Button
+                                                Grid.Row="1"
+                                                Width="40"
+                                                Height="28"
+                                                Margin="40"
+                                                HorizontalAlignment="Left"
+                                                VerticalAlignment="Top"
+                                                hc:IconElement.Geometry="{StaticResource CloseGeometry}"
+                                                Command="{Binding DataContext.DeleteScenarioCommand, RelativeSource={RelativeSource AncestorType=ItemsControl}}"
+                                                CommandParameter="{Binding}" />
+                                        </hc:TransitioningContentControl>
+                                    </Grid>
+
+                                    <hc:TransitioningContentControl TransitionStoryboard="{StaticResource FadeTransition}">
+                                        <!--  StepBar занимает всё доступное пространство слева  -->
+                                        <hc:StepBar
+                                            Margin="0,60,0,0"
+                                            Dock="Left"
+                                            ItemsSource="{Binding Steps}"
+                                            StepIndex="{Binding StepIndex}">
+                                            <hc:StepBar.ItemTemplate>
+                                                <DataTemplate>
+                                                    <Border Margin="0,8" Background="Transparent">
+                                                        <StackPanel MouseLeftButtonUp="StackPanel_MouseLeftButtonUp">
+                                                            <TextBlock
+                                                                FontSize="14"
+                                                                FontWeight="Bold"
+                                                                Foreground="LightGreen"
+                                                                Text="{Binding Header}" />
+                                                            <TextBlock
+                                                                FontSize="25"
+                                                                Foreground="White"
+                                                                Text="{Binding Content}" />
+                                                            <hc:TransitioningContentControl TransitionStoryboard="{StaticResource Right2LeftTransition}">
+                                                                <Button
+                                                                    hc:IconElement.Geometry="{StaticResource EyeOpenGeometry}"
+                                                                    Command="{Binding DataContext.ShowStepCardCommand, RelativeSource={RelativeSource AncestorType=hc:Window}}"
+                                                                    CommandParameter="{Binding}" />
+                                                            </hc:TransitioningContentControl>
+                                                        </StackPanel>
+                                                    </Border>
+                                                </DataTemplate>
+                                            </hc:StepBar.ItemTemplate>
+                                        </hc:StepBar>
+                                    </hc:TransitioningContentControl>
+                                </Grid>
+                            </DataTemplate>
+                        </ItemsControl.ItemTemplate>
+                    </ItemsControl>
+                </ScrollViewer>
+            </Grid>
+            <StackPanel
+                Grid.Row="1"
+                Margin="20,0,20,12"
+                HorizontalAlignment="Center"
+                Orientation="Horizontal">
+                <ComboBox
+                    DisplayMemberPath="Name"
+                    ItemsSource="{Binding AllScenarios}"
+                    SelectedItem="{Binding SelectedScenario}" />
+                <Button
+                    Margin="10,0,0,0"
+                    hc:IconElement.Geometry="{StaticResource AddGeometry}"
+                    Command="{Binding OpenScenarioCommand}"
+                    Content="Выбрать сценарий" />
+                <Button
+                    Margin="10,0,0,0"
+                    hc:IconElement.Geometry="{StaticResource DropperGeometry}"
+                    Command="{Binding ChangeOrDeleteScenarioCommand}"
+                    Content="Изменить сценарий" />
+            </StackPanel>
+        </Grid>
+    </UniformGrid>
+</hc:Window>

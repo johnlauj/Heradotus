@@ -1,0 +1,136 @@
+﻿<UserControl
+    x:Class="Herodotus.Views.StepCardView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:hc="https://handyorg.github.io/handycontrol"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:md="clr-namespace:MdXaml;assembly=MdXaml"
+    d:Height="1000"
+    d:Width="1000"
+    Background="#AA000000"
+    mc:Ignorable="d">
+
+    <!--  Основной контейнер растягивается на весь доступный размер  -->
+    <Grid HorizontalAlignment="Center" VerticalAlignment="Center">
+        <hc:TransitioningContentControl TransitionStoryboard="{StaticResource FadeTransition}">
+            <Border
+                Padding="16"
+                Background="#DD222222"
+                BorderBrush="#44FFFFFF"
+                BorderThickness="1"
+                CornerRadius="12"
+                SnapsToDevicePixels="True">
+
+                <!--  StackPanel заменён на Grid для растягивания  -->
+                <Grid HorizontalAlignment="Center">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <!--  Заголовок  -->
+                        <RowDefinition Height="Auto" />
+                        <!--  Контент шага  -->
+                        <RowDefinition Height="*" />
+                        <!--  Описание с Markdown  -->
+                        <RowDefinition Height="Auto" />
+                        <!--  Кнопки  -->
+                    </Grid.RowDefinitions>
+
+                    <!--  Заголовок шага  -->
+                    <TextBlock
+                        Grid.Row="0"
+                        Margin="0,0,0,8"
+                        FontSize="22"
+                        FontWeight="Bold"
+                        Foreground="LightGreen"
+                        Text="{Binding Step.Header, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+
+                    <!--  Контент шага  -->
+                    <hc:TransitioningContentControl Grid.Row="1" TransitionStoryboard="{StaticResource Right2LeftTransition}">
+                        <Border
+                            Margin="0,0,0,8"
+                            Padding="10"
+                            Background="#333333"
+                            CornerRadius="6">
+                            <TextBox
+                                AcceptsReturn="True"
+                                Background="Transparent"
+                                BorderThickness="0"
+                                FontSize="18"
+                                Foreground="White"
+                                Text="{Binding Step.Content, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                                TextWrapping="Wrap" />
+                        </Border>
+                    </hc:TransitioningContentControl>
+
+                    <!--  Описание шага с Markdown preview  -->
+                    <hc:TransitioningContentControl Grid.Row="2" TransitionStoryboard="{StaticResource Left2RightTransition}">
+                        <Grid
+                            MaxWidth="1500"
+                            MaxHeight="850"
+                            HorizontalAlignment="Stretch">
+                            <TabControl Grid.Row="2">
+                                <!--  Редактор  -->
+                                <TabItem Header="Редактировать">
+                                    <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto">
+                                        <Border
+                                            Padding="10"
+                                            Background="#2A2A2A"
+                                            BorderBrush="#555555"
+                                            BorderThickness="1"
+                                            CornerRadius="6">
+                                            <TextBox
+                                                AcceptsReturn="True"
+                                                Background="Transparent"
+                                                BorderThickness="0"
+                                                FontSize="15"
+                                                Foreground="White"
+                                                Text="{Binding Step.Description, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                                                TextWrapping="Wrap"
+                                                VerticalScrollBarVisibility="Auto" />
+                                        </Border>
+                                    </ScrollViewer>
+                                </TabItem>
+
+                                <!--  Markdown Preview  -->
+                                <TabItem Header="Просмотр" IsSelected="True">
+                                    <Border
+                                        Padding="10"
+                                        Background="#24292e"
+                                        BorderBrush="#555555"
+                                        BorderThickness="1"
+                                        CornerRadius="6">
+                                        <md:MarkdownScrollViewer
+                                            xml:space="preserve"
+                                            Background="Transparent"
+                                            Markdown="{Binding Step.Description, Mode=OneWay}"
+                                            ScrollViewer.HorizontalScrollBarVisibility="Visible"
+                                            ScrollViewer.VerticalScrollBarVisibility="Visible" />
+                                    </Border>
+                                </TabItem>
+                            </TabControl>
+                        </Grid>
+                    </hc:TransitioningContentControl>
+
+                    <!--  Кнопки управления  -->
+                    <StackPanel
+                        Grid.Row="3"
+                        Margin="0,12,0,0"
+                        HorizontalAlignment="Right"
+                        Orientation="Horizontal">
+                        <Button
+                            Width="120"
+                            Margin="0,0,8,0"
+                            hc:IconElement.Geometry="{StaticResource SaveGeometry}"
+                            Command="{Binding SaveCommand}"
+                            Content="Сохранить" />
+                        <Button
+                            Width="120"
+                            hc:IconElement.Geometry="{StaticResource ErrorGeometry}"
+                            Command="{Binding CloseCommand}"
+                            Content="Отмена" />
+                    </StackPanel>
+                </Grid>
+            </Border>
+        </hc:TransitioningContentControl>
+    </Grid>
+</UserControl>
