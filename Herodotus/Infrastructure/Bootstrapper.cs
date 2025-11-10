@@ -2,8 +2,8 @@
  * Author: Nikolay Dvurechensky
  * Site: https://sites.google.com/view/dvurechensky
  * Gmail: dvurechenskysoft@gmail.com
- * Last Updated: 09 ноября 2025 06:52:46
- * Version: 1.0.11
+ * Last Updated: 10 ноября 2025 06:53:43
+ * Version: 1.0.12
  */
 
 using Prism.DryIoc;
